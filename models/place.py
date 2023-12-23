@@ -13,7 +13,7 @@ place_amenity = Table("place_amenity", Base.metadata,
                              ForeignKey("places.id"),
                              primary_key=True,
                              nullable=False),
-                      Column("amenity_id", String(60),
+                      Column("amenity_id", String(60, collation="latin1_swedish_ci"),
                              ForeignKey("amenities.id"),
                              primary_key=True,
                              nullable=False))
